@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #eee;
+    --body-bg: #009688;
+    --header-bg: linear-gradient(21deg, #58899C, #625858);
+    --button-bg: #4E9CAF;
+    --container-bg: linear-gradient(33deg, #2fb583, #056690);
+    --shadow: 0px 2px 5px rgba(27, 24, 24, 0.68);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body-bg);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: minmax(1fr auto 1fr auto);
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 10px;
+    padding: 10px;
+    background: var(--container-bg);
+    box-shadow: var(--shadow);
+    grid-row-gap: 30px;
+}
+
+.grid-header {
+    color: #ecc99d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-text {
+    background: var(--header-bg);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.grid-quote {
+    background: linear-gradient(41deg, #4d74b7, #598da0fa, #6956a5f2);
+    color: #f3e3e2;
+    border-radius: 10px;
+    margin: 5px 5px;
+    box-shadow: var(--shadow);
+    transition: .35s ease-in-out;
+}
+
+#quote-text {
+    padding: 1em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.fa-quote-left,
+.fa-quote-right {
+    font-size: 2em;
+    color: #b4f5c0a8;
+    padding: 0 2px;
+}
+
+#author {
+    font-weight: bold;
+    padding: 5px;
+    color: #e3af62;
+    font-style: italic;
+}
+
+.grid-tweet-new-quote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.tweet {
+    grid-column: 1 / 2;
+    padding: 5px;
+}
+
+.fa-twitter {
+    padding: 5px;
+    color: #18c1f5;
+}
+
+.tweet-btn,
+#new-quote {
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text);
+    background: var(--button-bg);
+    box-shadow: 0px 2px 5px rgba(27, 24, 24, 0.68);
+    text-align: center;
+}
+
+.tweet-btn:hover,
+#new-quote:hover {
+    background: #056690;
+}
+
+#new-quote {
+    width: 140px;
+    border: none;
+    height: 43px;
+    text-align: left;
+}
+
+.tweet-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 25px;
+    text-decoration: none;
+}
+
+.new-quote {
+    grid-column: 2 / 5;
+    text-align: end;
+    position: relative;
+}
+
+.new-quote span {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+span.tweet-name {
+    position: absolute;
+    top: 14px;
+    left: 20px
+}
+
+.grid-design {
+    color: var(--text);
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    padding-top: 1em;
+}
